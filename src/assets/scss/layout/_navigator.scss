@@ -1,0 +1,17 @@
+// START NAVIGATOR
+.navigator{
+    background: #f4f4f4;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        font-weight:600;
+        li a{
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            line-height:40px;
+            padding:10px 20px;
+        }
+    }
+}

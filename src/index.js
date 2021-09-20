@@ -1,0 +1,25 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import reportWebVitals from './reportWebVitals';
+import App from './app';
+import { StoreProvider } from 'easy-peasy'
+import store from './store';
+
+// IMPORT STYLE
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/scss/style.scss';
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <StoreProvider store={store}>
+      <App />
+    </StoreProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
