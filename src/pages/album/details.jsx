@@ -1,5 +1,6 @@
 import { useStoreActions, useStoreState } from "easy-peasy"
 import { useEffect } from "react"
+import { Card, CardImg, CardText, CardBody } from "reactstrap"
 
 
 function AlbumDetails(props) {
@@ -15,12 +16,15 @@ function AlbumDetails(props) {
         <div>
             <h3>Photos :</h3>
             <hr />
-            {photo && photo.length !== 0 && photo.map((item, i) =>
+            {Object.keys(photo).length !== 0 && photo.map((item, i) =>
 
-                <div key={item.id}>
-                    <h5>{++i}. {item.title}</h5>
-                    <img src={item.url} height='150' alt="" />
-                </div>
+                <Card key={item.id} className=' m-1 p-4 float-start' style={{ width: '250px', height: '350px' }}>
+                    <CardImg src={item.url} alt="Card image cap" />
+                    <CardBody >
+                        <CardText>{++i}. {item.title}</CardText>
+                    </CardBody>
+                </Card>
+
             )}
         </div>
     )

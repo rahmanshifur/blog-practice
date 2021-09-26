@@ -9,6 +9,7 @@ import AuthorDetail from '../pages/author/detail'
 // import Gallery from '../pages/gallery';
 import Album from '../pages/album';
 import AlbumDetails from '../pages/album/details';
+import Todo from '../pages/todos';
 
 
 
@@ -17,6 +18,7 @@ function AppRouter() {
         <div className='container py-5'>
             <Navigator />
             <Router>
+                <Todo path='/todo' />
                 <AlbumDetails path='/album/:id/:title' />
                 <Album path='/album' />
                 {/* <Gallery path='/gallery' /> */}

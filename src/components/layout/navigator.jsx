@@ -15,6 +15,9 @@ function Navigator() {
                     <Link to='/album'>Album</Link>
                 </li>
                 <li>
+                    <Link to='/todo'>Todo</Link>
+                </li>
+                <li>
                     <Link to='/author'>Author</Link>
                 </li>
             </ul>

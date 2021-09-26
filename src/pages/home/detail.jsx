@@ -2,9 +2,9 @@
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import { useEffect } from 'react';
 import { Link } from '@reach/router';
+import { replace } from '../../util/helper';
 
 function PostDetail(props) {
-    console.log(props);
     const getDetails = useStoreActions(action => action.post.getDetails)
     const detail = useStoreState(state => state.post.details)
 
@@ -21,7 +21,7 @@ function PostDetail(props) {
                 <hr />
                 <p>
                     <b>Author: </b>
-                    <Link to={`/author/${detail.author.id}/${detail.author.name}`}>{detail.author.name}</Link>
+                    <Link to={`/author/${detail.author.id}/${replace(detail.author.name)}`}>{detail.author.name}</Link>
                 </p>
                 <hr />
 
